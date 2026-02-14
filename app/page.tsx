@@ -11,7 +11,7 @@ import {
 } from "@/components/portfolio/skill-category-cards"
 import { EducationCard } from "@/components/portfolio/education-card"
 import { ContactCard } from "@/components/portfolio/contact-card"
-import { OtherSkillsCard } from "@/components/portfolio/other-skills"
+import { OtherSSkillsCardComponent } from "@/components/portfolio/other-skills"
 
 export default function Page() {
   return (
@@ -34,7 +34,7 @@ export default function Page() {
               <EmergingTechCard />
             </div>
             <div className="mt-6 min-w-3x1" id="others">
-              <OtherSkillsCard />
+              <OtherSSkillsCardComponent />
             </div>
             <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-6 lg:gap-6">
               <ProjectCard />
