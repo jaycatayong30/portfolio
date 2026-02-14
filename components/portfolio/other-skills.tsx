@@ -1,17 +1,13 @@
-"use client"
-
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Rocket } from "lucide-react"
 import {
-  SiReact,
-  SiHtml5,
-  SiCss3,
-  SiNextdotjs,
-  SiTypescript,
-  SiVite,
+  SiGit,
+  SiGithub,
+  SiCanva,
+  SiFigma,
+  SiPostman,
 } from "react-icons/si"
-import { Code2, Database, Cpu, Brain, Sparkles } from "lucide-react"
+import { Wrench } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 
 interface Skill {
@@ -19,7 +15,8 @@ interface Skill {
   icon: React.ComponentType<{ className?: string }>
   color: string
 }
-interface OtherSkillCardProps {
+
+interface SkillCategoryCardProps {
   title: string
   icon: LucideIcon
   skills: Skill[]
@@ -29,20 +26,20 @@ export function OtherSkillsCard({
   title,
   icon: Icon,
   skills,
-}: OtherSkillCardProps) {
+}: SkillCategoryCardProps) {
   return (
-    <Card className="h-full border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 rounded-2xl">
-      <CardHeader className="pb-3">
+    <Card className="group relative h-full border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:hover:shadow-md rounded-2xl">
+      <CardHeader className="pb-4">
         <div className="flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-            <Rocket className="h-5 w-5 text-primary" />
+            <Icon className="h-5 w-5 text-primary" />
           </div>
-          <CardTitle className="text-xl font-semibold text-white">
-            Other Skills
+          <CardTitle className="text-lg font-semibold text-white">
+            {title}
           </CardTitle>
         </div>
       </CardHeader>
-      <CardContent className="flex flex-col gap-4">
+      <CardContent>
         <div className="flex flex-wrap gap-2">
           {skills.map((skill, index) => {
             const SkillIcon = skill.icon
@@ -64,4 +61,40 @@ export function OtherSkillsCard({
       </CardContent>
     </Card>
   )
-};
+}
+
+export function OtherSSkillsCardComponent() {
+  return (
+    <OtherSkillsCard
+      title="Tools & Platforms"
+      icon={Wrench}
+      skills={[
+        {
+          name: "Git",
+          icon: SiGit,
+          color: "text-[#F05032]",
+        },
+        {
+          name: "GitHub",
+          icon: SiGithub,
+          color: "text-[#181717]",
+        },
+        {
+          name: "Postman",
+          icon: SiPostman,
+          color: "text-[#FF6C37]",
+        },
+        {
+          name: "Canva",
+          icon: SiCanva,
+          color: "text-[#00C4CC]",
+        },
+        {
+          name: "Figma",
+          icon: SiFigma,
+          color: "text-[#F24E1E]",
+        },
+      ]}
+    />
+  )
+}

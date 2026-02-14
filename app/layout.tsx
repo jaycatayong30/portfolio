@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   title: 'Bejay O. Catayong | Portfolio',
   description:
     'IT Student & Future Full-Stack Developer. Resourceful BS Information Technology student with hands-on experience in digital platforms.',
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 }
 
 export const viewport: Viewport = {
