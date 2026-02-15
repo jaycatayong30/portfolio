@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   SiGit,
   SiGithub,
+  SiVsco,
   SiCanva,
   SiFigma,
   SiPostman,
@@ -78,6 +79,11 @@ export function OtherSSkillsCardComponent() {
           name: "GitHub",
           icon: SiGithub,
           color: "text-[#181717]",
+        },
+        {
+          name: "VS Code",
+          icon: SiVsco,
+          color: "text-[#0078D4]",
         },
         {
           name: "Postman",
