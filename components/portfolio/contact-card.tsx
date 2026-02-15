@@ -16,12 +16,6 @@ const contactItems = [
     href: "mailto:bejaycatayong@proton.me",
   },
   {
-    icon: Phone,
-    label: "Phone",
-    value: "09626565989",
-    href: "tel:09626565989",
-  },
-  {
     icon: Github,
     label: "Github",
     value: "https://github.com/jaycatayong30",
