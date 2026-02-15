@@ -21,7 +21,7 @@ export function HeroBanner() {
       id="home"
       className="-z-10 flex min-h-screen flex-col items-center justify-center overflow-hidden px-6"
     >
-      <div 
+      <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
@@ -82,10 +82,13 @@ export function HeroBanner() {
         </p>
 
         <div className="mt-5 flex flex-wrap items-center justify-center gap-4">
-          <Button className="rounded-xl" size="lg">
-            <Download className="mr-2 h-4 w-4" />
-            Download Resume
+          <Button className="rounded-xl" size="lg" asChild>
+            <a href="/BejayCatayong-Resume.pdf" download="BejayCatayong-Resume.pdf">
+              <Download className="mr-2 h-4 w-4" />
+              Download Resume
+            </a>
           </Button>
+
           <Button
             variant="outline"
             className="rounded-xl border-border text-foreground hover:bg-secondary hover:text-foreground"
