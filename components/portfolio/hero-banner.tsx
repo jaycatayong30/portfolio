@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button"
 import {
   Download,
-  User,
   MapPin,
   GraduationCap,
   ChevronDown,
@@ -42,8 +41,12 @@ export function HeroBanner() {
       <div className="pointer-events-none absolute -bottom-32 left-1/4 h-64 w-64 rounded-full bg-primary/5 blur-[100px]" />
 
       <div className="relative flex flex-col items-center text-center">
-        <div className="mb-8 flex h-28 w-28 items-center justify-center rounded-full border-2 border-primary/20 bg-card md:h-32 md:w-32">
-          <User className="h-14 w-14 text-muted-foreground md:h-16 md:w-16" />
+        <div className="mb-8 flex h-28 w-28 items-center justify-center rounded-full border-2 border-primary/20 bg-card md:h-32 md:w-32 overflow-hidden">
+          <img
+            src="/me.jpg"
+            alt="Bejay O. Catayong"
+            className="h-full w-full object-cover"
+          />
         </div>
 
         <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary">
