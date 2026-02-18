@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/portfolio/nav-bar"
 import { HeroBanner } from "@/components/portfolio/hero-banner"
 import { BioCard } from "@/components/portfolio/bio-card"
-
 import { ProjectCard } from "@/components/portfolio/project-card"
 import { ExperienceCard } from "@/components/portfolio/experience-card"
 import {
@@ -36,11 +35,11 @@ export default function Page() {
             <div className="mt-6 min-w-3x1" id="others">
               <OtherSSkillsCardComponent />
             </div>
-            <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-6 lg:gap-6">
+            <div id="projects" className="mt-6">
               <ProjectCard />
-              <div id="experience">
-                <ExperienceCard />
-              </div>
+            </div>
+            <div id="experience" className="mt-6">
+              <ExperienceCard />
             </div>
             <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-6 lg:gap-6">
               <EducationCard />

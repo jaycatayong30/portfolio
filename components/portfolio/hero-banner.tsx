@@ -41,7 +41,7 @@ export function HeroBanner() {
       <div className="pointer-events-none absolute -bottom-32 left-1/4 h-64 w-64 rounded-full bg-primary/5 blur-[100px]" />
 
       <div className="relative flex flex-col items-center text-center">
-        <div className="mb-8 flex h-28 w-28 items-center justify-center rounded-full border-2 border-primary/20 bg-card md:h-32 md:w-32 overflow-hidden">
+        <div className="mb-5 flex h-28 w-28 items-center justify-center rounded-full border-2 border-primary/20 bg-card md:h-32 md:w-32 overflow-hidden">
           <img
             src="/me.jpg"
             alt="Bejay O. Catayong"
@@ -105,7 +105,7 @@ export function HeroBanner() {
 
       <button
         onClick={scrollToContent}
-        className="absolute bottom-2 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+        className="absolute bottom-1 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
         aria-label="Scroll down to content"
       >
         <span className="text-[10px] font-medium tracking-widest uppercase">
