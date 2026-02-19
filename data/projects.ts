@@ -30,7 +30,6 @@ export const projects: Project[] = [
         src: "/public/projects/incident report management.jpg",
         title: "Incident Report Management Page",
       },
-      { src: "/public/projects/trucktracking.jpg", title: "Truck Tracking Page" },
       {
         src: "/public/projects/wastecollection tracking.jpg",
         title: "Waste Collection Tracking Page",
