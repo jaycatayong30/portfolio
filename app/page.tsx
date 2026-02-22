@@ -41,7 +41,7 @@ export default function Page() {
             <div id="experience" className="mt-6">
               <ExperienceCard />
             </div>
-            <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-6 lg:gap-6">
+            <div id="education" className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-6 lg:gap-6">
               <EducationCard />
               <ContactCard />
             </div>

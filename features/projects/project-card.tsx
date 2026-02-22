@@ -45,7 +45,7 @@ export function ProjectCard() {
               ))}
             </CarouselContent>
 
-            <div className="flex gap-2 mt-4 justify-end">
+            <div className="flex gap-2 mt-4 right-2 absolute top-0">
               <CarouselPrevious className="relative static h-8 w-8 border-primary/20 hover:bg-primary/10" />
               <CarouselNext className="relative static h-8 w-8 border-primary/20 hover:bg-primary/10" />
             </div>

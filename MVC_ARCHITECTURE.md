@@ -15,23 +15,32 @@ data/
 ├── projects.ts          # Project showcase data
 └── skills.ts            # All skill categories
 
-components/portfolio/
-├── bio-card.tsx                    # About Me card (uses bio.ts)
-├── contact-card.tsx                # Contact card (uses contact.ts)
-├── contact-items-display.tsx       # Reusable contact items renderer
-├── education-card.tsx              # Education card (uses education.ts)
-├── experience-card.tsx             # Experience card (uses experience.ts)
-├── hero-banner.tsx                 # Hero section (uses hero.ts)
-├── intro-card.tsx                  # Alternative intro section
-├── nav-bar.tsx                     # Navigation (uses navigation.ts)
-├── other-skills.tsx                # Tools & platforms (uses skills.ts)
-├── project-card.tsx                # Project showcase main component
-├── project-details.tsx             # Individual project details
-├── project-gallery.tsx             # Image carousel for projects
-├── responsibility-list.tsx         # Reusable responsibility renderer
-├── skill-category-card.tsx         # Reusable skill category card
-├── skill-category-cards.tsx        # Skill category exports
-└── tech-stack.tsx                  # Technology badges renderer
+features/
+├── bio/
+│   └── bio-card.tsx                 # About Me card (uses bio.ts)
+├── contact/
+│   └── contact-card.tsx             # Contact card (uses contact.ts)
+├── education/
+│   └── education-card.tsx           # Education card (uses education.ts)
+├── experience/
+│   └── experience-card.tsx          # Experience card (uses experience.ts)
+├── hero/
+│   ├── hero-banner.tsx              # Hero section (uses hero.ts)
+│   └── intro-card.tsx               # Alternative intro section
+├── navigation/
+│   └── nav-bar.tsx                  # Navigation (uses navigation.ts)
+├── projects/
+│   ├── project-card.tsx             # Project showcase main component
+│   ├── project-details.tsx          # Individual project details
+│   └── project-gallery.tsx          # Image carousel for projects
+├── skills/
+│   ├── other-skills.tsx             # Tools & platforms (uses skills.ts)
+│   ├── skill-category-card.tsx      # Reusable skill category card
+│   └── skill-category-cards.tsx     # Skill category exports
+└── shared/
+    ├── contact-items-display.tsx    # Reusable contact items renderer
+    ├── responsibility-list.tsx      # Reusable responsibility renderer
+    └── tech-stack.tsx               # Technology badges renderer
 ```
 
 ## How to Add New Content

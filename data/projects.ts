@@ -20,20 +20,22 @@ export const projects: Project[] = [
     description:
       "Architected a solution for the Mandaluyong City Environmental Management Department to automate solid waste monitoring.",
     images: [
-      { src: "/public/projects/dashboard.jpg", title: "Main Dashboard View" },
+      { src: "/projects/dashboard.jpg", title: "Main Dashboard View" },
+      { src: "/projects/emergency.jpg", title: "Emergency Management Page" },
       {
-        src: "/public/projects/employee management.jpg",
+        src: "/projects/employee management.jpg",
         title: "Employee Management Page",
       },
-      { src: "/public/projects/reports page.jpg", title: "Reports Page" },
+      { src: "/projects/reports page.jpg", title: "Reports Page" },
       {
-        src: "/public/projects/incident report management.jpg",
+        src: "/projects/incident report management.jpg",
         title: "Incident Report Management Page",
       },
       {
-        src: "/public/projects/wastecollection tracking.jpg",
+        src: "/projects/wastecollection tracking.jpg",
         title: "Waste Collection Tracking Page",
       },
+      { src: "/projects/trucktracking.jpg", title: "Truck Tracking Page" },
     ],
     techStack: [
       "Typescript",
