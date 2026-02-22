@@ -6,14 +6,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog" // Siguraduhin na tama ang path dito
+} from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { ExternalLink } from "lucide-react"
 
 export function ProjectCard() {
   return (
     <Dialog>
-      {/* Ito ang magiging clickable button mo */}
       <DialogTrigger asChild>
         <Button
           variant="outline"
@@ -24,7 +23,6 @@ export function ProjectCard() {
         </Button>
       </DialogTrigger>
 
-      {/* Ito ang box na lilitaw */}
       <DialogContent className="bg-[#121212] border-emerald-500/20 text-white">
         <DialogHeader>
           <DialogTitle className="text-xl text-emerald-400">

@@ -25,8 +25,6 @@ export default function Page() {
             <div id="about">
               <BioCard />
             </div>
-            <div className="mt-4 lg:mt-6">
-            </div>
             <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3 lg:mt-6 lg:gap-6">
               <FrontendSkillsCard />
               <BackendSkillsCard />
@@ -41,8 +39,10 @@ export default function Page() {
             <div id="experience" className="mt-6">
               <ExperienceCard />
             </div>
-            <div id="education" className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-6 lg:gap-6">
+            <div id="education" className="mt-6">
               <EducationCard />
+            </div>
+            <div id="contact" className="mt-6">
               <ContactCard />
             </div>
 
