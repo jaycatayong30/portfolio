@@ -16,7 +16,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "thesis-geo-tagging",
-    title: "THESIS | Geo-Tagging System for Solid Waste Monitoring",
+    title: "THESIS | Geo-Tagging System for Solid Waste Monitoring in City Environmental Management Department",
     description:
       "Architected a solution for the Mandaluyong City Environmental Management Department to automate solid waste monitoring.",
     images: [
