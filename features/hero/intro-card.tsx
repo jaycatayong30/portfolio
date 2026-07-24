@@ -1,8 +1,10 @@
 "use client"
 
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import {
   Download,
+  User,
   MapPin,
   GraduationCap,
   ChevronDown,
@@ -19,7 +21,7 @@ export function HeroBanner() {
   return (
     <section
       id="home"
-      className="sticky top-0 -z-10 flex min-h-screen flex-col items-center justify-center overflow-hidden px-6"
+      className="sticky top-0 z-0 flex min-h-screen flex-col items-center justify-center overflow-hidden px-6"
     >
       <div
         className="pointer-events-none absolute inset-0"
@@ -33,7 +35,7 @@ export function HeroBanner() {
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage:
-            "",
+            "linear-gradient(hsl(var(--muted-foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--muted-foreground)) 1px, transparent 1px)",
           backgroundSize: "48px 48px",
         }}
       />
@@ -42,12 +44,20 @@ export function HeroBanner() {
       <div className="pointer-events-none absolute -bottom-32 left-1/4 h-64 w-64 rounded-full bg-primary/5 blur-[100px]" />
 
       <div className="relative flex flex-col items-center text-center">
-        <div className="mb-8 overflow-hidden rounded-full border-2 border-primary/20 bg-card shadow-lg md:h-32 md:w-32 h-28 w-28">
-          <img
-            src={hero.image}
-            alt={hero.name}
-            className="h-full w-full object-cover"
-          />
+        <div className="relative mb-8 h-28 w-28 overflow-hidden rounded-full border-2 border-primary/20 bg-card md:h-32 md:w-32">
+          {hero.image ? (
+            <Image
+              src={hero.image}
+              alt={`${hero.name} profile`}
+              fill
+              sizes="128px"
+              className="object-cover"
+            />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center">
+              <User className="h-14 w-14 text-muted-foreground md:h-16 md:w-16" />
+            </div>
+          )}
         </div>
 
         <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary">
@@ -84,9 +94,11 @@ export function HeroBanner() {
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <Button className="rounded-xl" size="lg">
-            <Download className="mr-2 h-4 w-4" />
-            Download Resume
+          <Button asChild className="rounded-xl" size="lg">
+            <a href={hero.resumeUrl} download>
+              <Download className="mr-2 h-4 w-4" />
+              Download Resume
+            </a>
           </Button>
           <Button
             variant="outline"
