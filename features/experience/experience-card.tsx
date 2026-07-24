@@ -5,8 +5,6 @@ import { experiences } from "@/data/experience"
 import { ResponsibilityList } from "../shared/responsibility-list"
 
 export function ExperienceCard() {
-  const experience = experiences[0]
-
   return (
     <Card className="h-full border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 rounded-2xl">
       <CardHeader className="pb-4">
@@ -20,19 +18,23 @@ export function ExperienceCard() {
         </div>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
-        <div>
-          <h3 className="text-lg font-semibold text-foreground">
-            {experience.position}
-          </h3>
-          <p className="text-sm text-muted-foreground">
-            {experience.company}
-          </p>
-          <p className="mt-1 text-xs font-medium tracking-wide text-primary/80 uppercase">
-            {experience.startDate} &ndash; {experience.endDate}
-          </p>
-        </div>
-        <Separator className="bg-border" />
-        <ResponsibilityList items={experience.responsibilities} />
+        {experiences.map((experience, index) => (
+          <div key={experience.id} className="flex flex-col gap-3">
+            <div>
+              <h3 className="text-lg font-semibold text-foreground">
+                {experience.position}
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                {experience.company}
+              </p>
+              <p className="mt-1 text-xs font-medium tracking-wide text-primary/80 uppercase">
+                {experience.startDate} &ndash; {experience.endDate}
+              </p>
+            </div>
+            <ResponsibilityList items={experience.responsibilities} />
+            {index < experiences.length - 1 && <Separator className="bg-border" />}
+          </div>
+        ))}
       </CardContent>
     </Card>
   )

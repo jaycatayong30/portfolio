@@ -13,7 +13,7 @@ export interface HeroData {
 
 export const hero: HeroData = {
   name: "Bejay O. Catayong",
-  title: "IT Student & Future Full-Stack Developer",
+  title: "BSIT Graduate & Future Full-Stack Engineer",
   subtitle: "Hello, I'm",
   location: "Philippines",
   school: "Jose Rizal University",
@@ -21,5 +21,5 @@ export const hero: HeroData = {
   description:
     "Resourceful BS Information Technology student passionate about building scalable, user-centered web applications and contributing technical expertise through collaborative, impact-driven solutions.",
   image: "/me.jpg",
-  resumeUrl: "/BejayCatayong-Resume.pdf",
+  resumeUrl: "/Resume_CatayongBejay.pdf",
 }

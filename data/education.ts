@@ -11,7 +11,7 @@ export const education: Education = {
   school: "Jose Rizal University",
   degree: "Bachelor of Science Information Technology",
   startDate: "2022",
-  endDate: "Present",
+  endDate: "2026",
   certifications: [
     "Certiport IT Specialist (Databases)",
     "NCIII Java Programming",

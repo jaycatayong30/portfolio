@@ -1,5 +1,5 @@
 import { Navbar } from "@/features/navigation/nav-bar"
-import { HeroBanner } from "@/features/hero/hero-banner"
+import { HeroBanner } from "@/features/hero/intro-card"
 import { BioCard } from "@/features/bio/bio-card"
 import { ProjectCard } from "@/features/projects/project-card"
 import { ExperienceCard } from "@/features/experience/experience-card"

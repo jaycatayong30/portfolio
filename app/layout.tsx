@@ -12,10 +12,10 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Bejay O. Catayong | Portfolio',
   description:
-    'IT Student & Future Full-Stack Developer. Resourceful BS Information Technology student with hands-on experience in digital platforms.',
+    'BSIT Graduate & Future Full-Stack Engineer. Resourceful BS Information Technology student with hands-on experience in digital platforms.',
   openGraph: {
     title: 'Bejay O. Catayong | Portfolio',
-    description: 'IT Student & Future Full-Stack Developer.',
+    description: 'BSIT Graduate & Future Full-Stack Engineer.',
     url: 'https://catayongportfolio.vercel.app',
     siteName: 'Bejay O. Catayong Portfolio',
     images: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Bejay O. Catayong | Portfolio',
-    description: 'IT Student & Future Full-Stack Developer.',
+    description: 'BSIT Graduate & Future Full-Stack Engineer.',
     images: ['/me.jpg'],
   },
 }
