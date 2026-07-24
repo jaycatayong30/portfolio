@@ -11,6 +11,7 @@ import {
   SiMysql,
   SiMongodb,
   SiSupabase,
+  SiPython,
 } from "react-icons/si"
 import { Code2, Database, Cpu, Brain, Sparkles } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
@@ -100,8 +101,8 @@ export function FrontendSkillsCard() {
           color: "text-[#3178C6]",
         },
         {
-          name: "Vite",
-          icon: SiVite,
+          name: "Python",
+          icon: SiPython,
           color: "text-[#646CFF]",
         },
       ]}
@@ -146,6 +147,11 @@ export function EmergingTechCard() {
       title="Emerging Tech"
       icon={Cpu}
       skills={[
+        {
+          name: "Python",
+          icon: SiPython,
+          color: "text-[#10A37F]",
+        },
         {
           name: "Gen AI Prompt Engineering",
           icon: Brain,

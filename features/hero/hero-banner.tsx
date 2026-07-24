@@ -7,6 +7,7 @@ import {
   GraduationCap,
   ChevronDown,
 } from "lucide-react"
+import { hero } from "@/data/hero"
 
 function scrollToContent() {
   document
@@ -41,56 +42,58 @@ export function HeroBanner() {
       <div className="pointer-events-none absolute -bottom-32 left-1/4 h-64 w-64 rounded-full bg-primary/5 blur-[100px]" />
 
       <div className="relative flex flex-col items-center text-center">
-        <div className="mb-5 flex h-28 w-28 items-center justify-center rounded-full border-2 border-primary/20 bg-card md:h-32 md:w-32 overflow-hidden">
-          <img
-            src="/me.jpg"
-            alt="Bejay O. Catayong"
-            className="h-full w-full object-cover"
-          />
-        </div>
+        {hero.image && (
+          <div className="mb-5 flex h-28 w-28 items-center justify-center rounded-full border-2 border-primary/20 bg-card md:h-32 md:w-32 overflow-hidden">
+            <img
+              src={hero.image}
+              alt={hero.name}
+              className="h-full w-full object-cover"
+            />
+          </div>
+        )}
 
         <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary">
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
-          Open to opportunities
+          {hero.status}
         </span>
 
         <p className="font-mono text-sm tracking-widest text-muted-foreground uppercase">
-          Hello, I{"'"}m
+          {hero.subtitle}
         </p>
 
         <h1 className="mt-1 text-5xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl text-balance">
-          Bejay O. Catayong
+          {hero.name}
         </h1>
 
         <p className="mt-4 text-xl font-medium tracking-wide text-primary md:text-2xl">
-          IT Student & Future Full-Stack Developer
+          {hero.title}
         </p>
 
         <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
           <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
             <MapPin className="h-3.5 w-3.5" />
-            Philippines
+            {hero.location}
           </span>
           <span className="h-3.5 w-px bg-muted-foreground/30" />
           <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
             <GraduationCap className="h-3.5 w-3.5" />
-            Jose Rizal University
+            {hero.school}
           </span>
         </div>
 
         <p className="mt-5 max-w-xl leading-relaxed text-muted-foreground">
-          Resourceful BS Information Technology student passionate about building
-          scalable, user-centered web applications and contributing technical
-          expertise through collaborative, impact-driven solutions.
+          {hero.description}
         </p>
 
         <div className="mt-5 flex flex-wrap items-center justify-center gap-4">
-          <Button className="rounded-xl" size="lg" asChild>
-            <a href="/BejayCatayong-Resume.pdf" download="BejayCatayong-Resume.pdf">
-              <Download className="mr-2 h-4 w-4" />
-              Download Resume
-            </a>
-          </Button>
+          {hero.resumeUrl && (
+            <Button className="rounded-xl" size="lg" asChild>
+              <a href={hero.resumeUrl} download>
+                <Download className="mr-2 h-4 w-4" />
+                Download Resume
+              </a>
+            </Button>
+          )}
 
           <Button
             variant="outline"

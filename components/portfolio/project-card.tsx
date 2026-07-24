@@ -3,14 +3,36 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { FolderGit2, ExternalLink } from "lucide-react"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 const highlights = [
-  "Automated tracking system",
+  "Automated truck tracking system",
+  "Automated solid waste monitoring system",
   "Reduced manual reporting errors",
-  "Applied MVC architecture for scalability",
+  "With real-time data visualization and reporting",
 ]
 
-const techStack = ["PHP", "MVC", "MySQL", "Geo-tagging"]
+const techStack = ["Typescript", "React", "Supabase", "Next.js", "Tailwind CSS", "MapLibre GL", "ApexCharts"]
+
+const thesisImages = [
+  "/projects/thesis-ui-1.png",
+  "/projects/thesis-ui-2.png",
+  "/projects/thesis-ui-3.png",
+];
 
 export function ProjectCard() {
   return (
@@ -29,7 +51,7 @@ export function ProjectCard() {
         <CardContent className="flex flex-col gap-4">
           <div>
             <h3 className="text-lg font-semibold text-foreground">
-              Geo-Tagging Waste Monitoring System
+              THESIS | Geo-Tagging System for Solid Waste Monitoring in City Environmental Management Department
             </h3>
             <p className="mt-2 leading-relaxed text-muted-foreground">
               Architected a solution for the Mandaluyong City Environmental
@@ -64,19 +86,100 @@ export function ProjectCard() {
         </CardContent>
       </Card>
 
-      {/* Hover overlay */}
       <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-5 rounded-2xl bg-black/70 opacity-0 backdrop-blur-sm transition-all duration-300 group-hover:pointer-events-auto group-hover:opacity-100">
-        <p className="px-6 text-center text-sm text-muted-foreground">
-          Tech Stack: PHP, MVC Architecture, MySQL
-        </p>
-        <Button
-          variant="outline"
-          className="rounded-xl border-primary/30 text-foreground hover:bg-primary/10 hover:text-primary"
-        >
-          <ExternalLink className="mr-2 h-4 w-4" />
-          View Details
-        </Button>
-      </div>
-    </div>
+
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button
+              variant="outline"
+              className="rounded-xl border-primary/30 text-foreground hover:bg-primary/10 hover:text-primary"
+            >
+              <ExternalLink className="mr-2 h-4 w-4" />
+              View Personal Projects
+            </Button>
+          </DialogTrigger>
+
+          <Carousel>
+            <CarouselContent>
+
+              <DialogContent className="bg-card rounded-2xl overflow-hidden sm:max-w-5xl w-[95%] border-primary/20 p-0 shadow-2xl">
+                <div className="flex flex-col lg:flex-row h-full max-h-[90vh]">
+
+                  <div className="w-full lg:w-[65%] bg-black/5 flex items-center justify-center p-4 lg:p-8">
+                    <Carousel className="w-full max-w-xl">
+
+                      <CarouselContent>
+                        {thesisImages.map((src, index) => (
+
+                          <CarouselItem key={index}>
+                            <div className="relative aspect-video overflow-hidden rounded-xl border border-border">
+                              <img
+                                src={src}
+                                alt={`Project Screenshot ${index + 1}`}
+                                className="object-cover w-full h-full"
+                              />
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+
+                      <CarouselPrevious className="left-2" />
+                      <CarouselNext className="right-2" />
+
+                    </Carousel>
+                  </div>
+
+                  <CarouselPrevious className="left-2" />
+                  <CarouselNext className="right-2" />
+
+                  <div className="w-full lg:w-[35%] p-6 lg:p-8 overflow-y-auto border-l border-border bg-card/50">
+
+                    <DialogHeader>
+                      <DialogTitle className="text-2xl font-bold tracking-tight text-foreground">
+                        Personal Projects
+                      </DialogTitle>
+                      <p className="text-sm font-medium text-primary mt-1">Featured Thesis Work</p>
+                    </DialogHeader>
+
+                    <Separator className="my-6" />
+
+                    <div className="space-y-6">
+                      <div>
+                        <h3 className="text-lg font-semibold leading-tight">
+                          Geo-Tagging System for Solid Waste Monitoring
+                        </h3>
+                        <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
+                          Architected a solution for the Mandaluyong City Environmental Management Department.
+                          Features real-time data visualization and automated truck tracking.
+                        </p>
+                      </div>
+
+                      <div className="space-y-3">
+                        <h4 className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Technologies Used</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {["Next.js", "Supabase", "MapLibre GL", "Tailwind"].map((tech) => (
+
+                            <span key={tech} className="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-medium">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </DialogContent>
+
+            </CarouselContent>
+          </Carousel>
+
+        </Dialog>
+
+      </div >
+    </div >
   )
 }

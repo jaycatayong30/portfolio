@@ -1,17 +1,16 @@
-import { Navbar } from "@/components/portfolio/nav-bar"
-import { HeroBanner } from "@/components/portfolio/hero-banner"
-import { BioCard } from "@/components/portfolio/bio-card"
-
-import { ProjectCard } from "@/components/portfolio/project-card"
-import { ExperienceCard } from "@/components/portfolio/experience-card"
+import { Navbar } from "@/features/navigation/nav-bar"
+import { HeroBanner } from "@/features/hero/hero-banner"
+import { BioCard } from "@/features/bio/bio-card"
+import { ProjectCard } from "@/features/projects/project-card"
+import { ExperienceCard } from "@/features/experience/experience-card"
 import {
   FrontendSkillsCard,
   BackendSkillsCard,
   EmergingTechCard,
-} from "@/components/portfolio/skill-category-cards"
-import { EducationCard } from "@/components/portfolio/education-card"
-import { ContactCard } from "@/components/portfolio/contact-card"
-import { OtherSSkillsCardComponent } from "@/components/portfolio/other-skills"
+} from "@/features/skills/skill-category-cards"
+import { EducationCard } from "@/features/education/education-card"
+import { ContactCard } from "@/features/contact/contact-card"
+import { OtherSSkillsCardComponent } from "@/features/skills/other-skills"
 
 export default function Page() {
   return (
@@ -26,8 +25,6 @@ export default function Page() {
             <div id="about">
               <BioCard />
             </div>
-            <div className="mt-4 lg:mt-6">
-            </div>
             <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3 lg:mt-6 lg:gap-6">
               <FrontendSkillsCard />
               <BackendSkillsCard />
@@ -36,14 +33,16 @@ export default function Page() {
             <div className="mt-6 min-w-3x1" id="others">
               <OtherSSkillsCardComponent />
             </div>
-            <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-6 lg:gap-6">
+            <div id="projects" className="mt-6">
               <ProjectCard />
-              <div id="experience">
-                <ExperienceCard />
-              </div>
             </div>
-            <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-6 lg:gap-6">
+            <div id="experience" className="mt-6">
+              <ExperienceCard />
+            </div>
+            <div id="education" className="mt-6">
               <EducationCard />
+            </div>
+            <div id="contact" className="mt-6">
               <ContactCard />
             </div>
 

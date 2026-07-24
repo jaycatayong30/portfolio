@@ -2,15 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
-
-const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About Me", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" },
-]
+import { navLinks, brandLogo } from "@/data/navigation"
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -26,17 +18,18 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${scrolled
+      className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${
+        scrolled
           ? "bg-black/60 backdrop-blur-md border-b border-white/10 shadow-lg shadow-black/20"
           : "bg-transparent"
-        }`}
+      }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a
           href="#home"
           className="font-mono text-sm font-bold tracking-wider text-foreground transition-colors hover:text-primary"
         >
-          {"<BC />"}
+          {brandLogo}
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
